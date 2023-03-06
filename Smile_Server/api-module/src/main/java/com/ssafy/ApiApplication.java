@@ -17,7 +17,7 @@ public class ApiApplication {
 
     public static void main(String[] args) {
         System.setProperty("spring.config.name",
-                "application,application-real,application-aws,application-coolsms,application-login,application-pay");
+                "application,application-real,application-aws,application-coolsms,application-login,application-pay,application-db");
         SpringApplication.run(ApiApplication.class, args);
     }
 

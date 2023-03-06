@@ -16,6 +16,7 @@ spring:
       - coolsms
       - login
       - pay
+      - db
   jpa:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     generate-ddl: true
@@ -29,14 +30,6 @@ spring:
         use_sql_comments: true
     open-in-view: false
     defer-datasource-initialization: true
-  datasource:
-    url: jdbc:mysql://localhost:3306/smile?serverTimeZone=Asia/Seoul&useLegacyDatetimeCode=false
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    username: ssafy
-    password: S0706
-    hikari:
-      connection-timeout: 58000
-      max-lifetime: 580000
   sql:
     init:
       mode: always
