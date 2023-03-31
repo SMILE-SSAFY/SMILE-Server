@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class ExceptionController {
 
     /**
-     * CustomAccessDeniedHandler에서 redirect로 오면 authorization error throw
+     * CustomAuthenticationEntryPoint에서 redirect로 오면 authentication error throw
      */
     @GetMapping("/entrypoint")
     public void entrypointException() {
@@ -26,10 +26,10 @@ public class ExceptionController {
     }
 
     /**
-     * CustomAuthenticationEntryPoint에서 redirect로 오면 authentication error throw
+     * CustomAccessDeniedHandler에서 redirect로 오면 authorization error throw
      */
     @GetMapping("/autorization")
     public void deniedHandler() {
-        throw new CustomException(ErrorCode.FAIL_AUTHENTICATION);
+        throw new CustomException(ErrorCode.FAIL_AUTHORIZATION);
     }
 }
